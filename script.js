@@ -113,6 +113,7 @@ function endGame() {
     cells.forEach((cell) => {
         cell.classList.remove("circle");
         cell.classList.remove("x");
+        cell.addEventListener("click", handleClick, { once: true });
     });
     boardArray.fill("");
     const winningMessage = document.getElementById("winningMessage");
